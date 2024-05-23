@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+    <TextView
+        android:id="@+id/activity_main_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Informe o nome de usuario do github:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="16dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/activity_main_nome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/activity_main_text"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/activity_main_campo_nome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nome"
+            android:inputType="text"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Click here"
+        app:layout_constraintTop_toBottomOf="@+id/activity_main_nome"/>
+
+    <TextView
+        android:id="@+id/activity_main_nome_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Luiz Filipe Minohala Kato"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button"
+        android:layout_margin="16dp"/>
+
+    <TextView
+        android:id="@+id/activity_main_bio_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:text="Android and Backend Developer🧑🏻‍💻"
+        app:layout_constraintStart_toStartOf="@id/activity_main_nome_user"
+        app:layout_constraintTop_toBottomOf="@id/activity_main_nome_user" />
+
+    <TextView
+        android:id="@+id/activity_main_url_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="16sp"
+        android:maxLines="1"
+        android:textColor="@android:color/holo_blue_light"
+        android:clickable="true"
+        tools:text="https://github.com/Luiz-Filipee"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@id/activity_main_nome_user"
+        app:layout_constraintTop_toBottomOf="@id/activity_main_bio_user" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
